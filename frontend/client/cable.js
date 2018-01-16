@@ -4,9 +4,9 @@ let consumer;
 
 function createChannel(...args) {
   if (!consumer) {
-    consumer = cable.createChannel();
+    consumer = cable.createConsumer();
   }
 
-  return consumer.subsciptions.create(...args);
+  return consumer.subscriptions.create(...args);
 }
 export default createChannel;
